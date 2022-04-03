@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*codigo para los contenidos apilados desplegables*/
+.contenedorpanel{
+	width:80%;
+	height:80%;
+	color:rgb(146,24,23);
+	background-color:#FFF;
+	text-align:center;
+	padding:5% 10%;
+	/*padding:150px 100px 50px 100px;*/
+	/*text-align:justify;*/
+	position:relative;
+}
+
+
+
+/*.tituloPanel{
+	width:80%;
+	height:40px;
+	line-height:40px;
+	margin-left: -200px; la mitad del ancho de la imagen
+	margin-top: -15px;  la mitad del alto de la imagen
+	position:absolute;
+	left: 50%;
+	top: 80px;
+	font-size:36px;
+	font-weight:bolder;
+	color:#000;
+	text-align:center;
+}*/
+
+.flip {
+	text-align: center;
+    width:100%;
+	background-color:#2053ae /*rgb(156, 186, 59)*/;
+    border: solid 1px #FFF;
+	color:#FFF;
+	cursor:pointer;
+	font-weight:bold;
+	font-size:18px;
+}
+
+.flip a{
+	color:#FFF;
+	list-style: none;	
+}
+
+.panel {
+    width:100%;
+	/*padding: 0 10%  ;*/
+    display: none;
+	/*text-align:justify;*/
+	background-color:rgb(230, 230, 255);
+	/*color:#000;*/
+}
+
+.item {
+	width:100%;
+	/*padding: 0 5px;
+	margin: 0 5px;*/
+	background-color:rgb(190, 210, 243);
+	color:#2053ae;
+	text-align:center;
+	font-size:16px;
+}
+
+.item a{
+	color:#2053ae;
+	text-align:center;
+	list-style: none;	
+}
+
+
+
+
+/*.borde{
+	border-left:solid #000;
+}*/

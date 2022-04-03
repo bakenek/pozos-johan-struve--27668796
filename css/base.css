@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin:0;
+	padding:0;
+}
+
+/* para asegurar la correcta interpretacion de navegadores viejos a secciones html5*/
+header, section, footer, aside, nav, main, article, figure {
+	display: block; 
+}
+
+html {
+    font-size:50%; /* referencia para la fuente rem (mobile first)*/
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #FFF;
+}
+
+/* texto responsive */
+@media (min-width:240px)  {html {font-size:50%;} }
+@media (min-width:320px)  {html {font-size:60%;} }
+@media (min-width:480px)  {html {font-size:70%;} }
+@media (min-width:600px)  {html {font-size:80%;} }
+@media (min-width:768px)  {html {font-size:90%;} }
+@media (min-width:900px)  {html {font-size:100%;} }
+@media (min-width:1200px) {html {font-size:110%;} }
+
+h1 {
+	/*para el efecto responsive sobre el texto se debe trabajar las fuentes con la medida 'em' o 'rem' */
+	font-size:32px; /* para navegadores no compatibles con rem */
+	font-size:2rem;  /* para navgadores nuevos (CALCULO = 32px/16=2rem) */ 
+}
+
+h2 {
+	/*para el efecto responsive sobre el texto se debe trabajar las fuentes con la medida 'em' o 'rem'*/
+	font-size:24px; /* para navegadores no compatibles con rem */
+	font-size:1.5rem; /* 24px/16=1.5em */
+}
+
+h3 {
+	/*para el efecto responsive sobre el texto se debe trabajar las fuentes con la medida 'em' o 'rem'*/
+	font-size:18px; /* para navegadores no compatibles con rem */
+	font-size:1.17rem; /* 18px/16=1.17em */
+}
+
+p {
+	/*para el efecto responsive sobre el texto se debe trabajar las fuentes con la medida 'em' o 'rem' */
+	font-size:16px; /* para navegadores no compatibles con rem */
+	font-size:1rem; /* 16px/16=1em */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+iframe{
+	margin:0;
+	border:0;	
+}
+
+summary{
+	cursor:pointer;
+}
+
+map {
+    display: inline;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	text-decoration-color:none;
+	/*color: rgb(179, 204, 204);*/
+}

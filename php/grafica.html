@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="description" content="Pozos">
+    <meta name="keywords" content="medicion de pozos">
+    <meta name="revisit-after" content="7 days">  
+<link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"  />
+
+
+<title>Documento sin título</title>
+</head>
+
+<body>
+<canvas id="myChart" width="100" height="100"></canvas>
+
+
+</body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+<script>
+
+
+function cargardatosgraficobar(){
+	$.ajax({
+		
+		  url: 'contro.php',
+		  type: 'post'
+		}).done(function(resp){
+			var titulo =[];
+			var cantidad =[];
+			var data = JSON.parse(resp)
+			
+			for(var i=0; i<data.length;i++){
+				titulo.push(data[i][2]);
+				cantidad.push(data[i][3]);
+				}
+				
+				
+				const ctx = document.getElementById('myChart');
+                const myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: titulo,
+        datasets: [{
+            label: 'manometro',
+            data: cantidad,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+			
+			})
+	}
+
+</script>
